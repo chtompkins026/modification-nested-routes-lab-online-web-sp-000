@@ -7,7 +7,7 @@ module ArtistsHelper
    if song.artist.nil?
       select_tag "songpost[artist_id]", options_from_collection_for_select(Artist.all, :id, :name)
     else
-      hidden_field_tag "post[author_id]", post.author_id
+        artist.name
     end
   end 
   
