@@ -48,8 +48,8 @@ end
     if artist.nil?
       redirect_to artist_path, alert: "Artist not found."
     else
-      @post = author.posts.find_by(id: params[:id])
-      redirect_to author_posts_path(author), alert: "Post not found." if @post.nil?
+      @song = artist.songs.find_by(id: params[:id])
+      redirect_to artist_songs_path(artist), alert: "Song not found." if @song.nil?
     end
   else
     @post = Post.find(params[:id])
